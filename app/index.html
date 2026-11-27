@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plainprice — Black Friday 2026 deals, checked and dated</title>
+<meta name="description" content="Black Friday and Cyber Monday 2026 deals with the price, the usual price, when each was checked, and a plain verdict on whether it is really a deal.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231d1b16'/%3E%3Cpath d='M4 12V4h4.2a2.6 2.6 0 0 1 0 5.2H6' fill='none' stroke='%23f4c542' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="plainprice.css">
+<script type="module" src="finder-app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <a class="brand" href="./">Plain<b>price</b></a>
+  <p class="tagline">Black Friday 2026. Every price dated, sourced and judged.</p>
+  <p class="desk-facts" id="desk-facts"></p>
+</header>
+
+<div class="desk">
+  <aside class="panel" aria-label="Search and filters">
+    <label class="field" for="search">Search
+      <input id="search" type="search" placeholder="tv, sony, vacuum…" autocomplete="off" spellcheck="false">
+    </label>
+
+    <section class="group" aria-labelledby="h-category">
+      <h2 id="h-category">Category</h2>
+      <div class="chips" id="filter-category"></div>
+    </section>
+    <section class="group" aria-labelledby="h-store">
+      <h2 id="h-store">Store</h2>
+      <div class="chips" id="filter-store"></div>
+    </section>
+    <section class="group" aria-labelledby="h-discount">
+      <h2 id="h-discount">Discount</h2>
+      <div class="chips" id="filter-discount"></div>
+    </section>
+    <section class="group" aria-labelledby="h-verdict">
+      <h2 id="h-verdict">Is it really a deal?</h2>
+      <div class="chips" id="filter-verdict"></div>
+    </section>
+
+    <p class="method">
+      <b>New low</b> beats every earlier price we found. <b>Strong price</b> is a real cut but not a record.
+      <b>Routine sale</b> was this cheap, or cheaper, before. <b>Padded “was” price</b> leans on a usual price we could not confirm.
+      Prices move fast: the time beside each deal is when it was true.
+    </p>
+  </aside>
+
+  <main class="results">
+    <div class="toolbar">
+      <p class="tally"><strong id="tally" aria-live="polite"></strong> <span id="active-filters"></span>
+        <button type="button" class="link-button" id="clear-filters" hidden>Clear</button></p>
+      <label class="sort" for="sort">Sort
+        <select id="sort"></select>
+      </label>
+    </div>
+    <div class="columns" aria-hidden="true">
+      <span>Verdict · score</span><span>Product</span><span>Store</span><span>Now · usual · off</span><span>Price checked</span><span>Link</span>
+    </div>
+    <ol class="deal-list" id="deal-list"></ol>
+  </main>
+</div>
+
+<footer class="colophon">
+  Plainprice lists only prices it could read and date. Stores change them without notice, so confirm on the store page before paying.
+  No tracking, no affiliate tags, no sign-up.
+</footer>
+</body>
+</html>
